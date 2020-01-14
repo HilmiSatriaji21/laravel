@@ -38,7 +38,7 @@ class SekolahController extends Controller
     }
         }
     }
-    public function jenis($jenis=null,$warna=null,$harga=null)
+    public function jeniskucing2($jenis=null,$warna=null,$harga=null)
     {
     if ($jenis) {
         echo "<b>Anda Memilih Jenis " . $jenis . "<b>";
@@ -46,13 +46,13 @@ class SekolahController extends Controller
     if ($warna) {
         echo " Dan Anda Memilih Warna " . "<b>" . $warna . "</b>";
     }
-    if ($harga <= 15000000) {
+    if ($harga >= 15000) {
         echo " Dengan Ukuran Jumbo Dengan Harga " . "<b>" . $harga . "</b>";
     }
-    if ($harga <= 1500000) {
+    elseif ($harga < 15000 && $harga >= 7500) {
         echo " Dengan Ukuran Medium Dengan Harga " . "<b>" . $harga . "</b>";
     }
-    if ($harga <= 150000) {
+    if ($harga < 7500) {
         echo " Dengan Ukuran Normal Dengan Harga " . "<b>" . $harga . "</b>";
     }
     if ( !$jenis && !$warna && !$harga ) {

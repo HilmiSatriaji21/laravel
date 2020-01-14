@@ -140,5 +140,13 @@ Route::get('date', 'SekolahController@tanggal');
 Route::get('life', 'SekolahController@tinggal');
 Route::get('hobby', 'SekolahController@hobi');
 Route::get('warnakucing/{warna?}/{jenis?}', 'SekolahController@jeniskucing' );
-Route::get('mesan/{jenis?}/{warna?}/{harga?}', 'SekolahController@jenis');
+Route::get('beli/{jenis?}/{warna?}/{harga?}', 'SekolahController@jeniskucing2');
+
+// CRUD BOOK
+Route::get('book', 'BookController@index');
+Route::get('book-create/{judul}', 'BookController@create');
+Route::get('book/{id?}', 'BookController@show');
+Route::get('book-edit/{id}/{judul}', 'BookController@edit');
+Route::get('book-delete/{id}', 'BookController@delete');
+Route::get('book-select/', 'BookController@select')
 ?>
