@@ -148,5 +148,13 @@ Route::get('book-create/{judul}', 'BookController@create');
 Route::get('book/{id?}', 'BookController@show');
 Route::get('book-edit/{id}/{judul}', 'BookController@edit');
 Route::get('book-delete/{id}', 'BookController@delete');
-Route::get('book-select/', 'BookController@select')
+Route::get('book-select/', 'BookController@select');
+
+// Artikel
+Route::get('artikel', 'ArtikelController@index');
+Route::get('artikel-create', 'ArtikelController@create');
+Route::get('artikel-show/{id}', 'ArtikelController@show');
+Route::get('artikel-edit/{id}/edit', 'ArtikelController@edit');
+Route::get('artikel-delete/{id}', 'ArtikelController@delete');
+//Route::resource('artikel', 'ArtikelController');
 ?>

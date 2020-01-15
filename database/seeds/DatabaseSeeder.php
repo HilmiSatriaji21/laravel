@@ -11,7 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-    $this->call(Gajih::class);
+    //$this->call(Gajih::class);
+    $this->call(ArtikelSeeder::class);
     // $this->call(PostSeeder::class);
     }
 }
